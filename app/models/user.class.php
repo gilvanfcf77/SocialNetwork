@@ -4,11 +4,14 @@ include "account.class.php";
 class User { 
     private $login; 
     private $password;
-    private $account = new Account;
+    private $account;
     
     
-   function __construct() {
-   	
+   function __construct($login, $password, $account) {
+
+   		$this->login = $login;
+   		$this->password = $password;
+   		$this->account = $account;
    } 
 } 
 

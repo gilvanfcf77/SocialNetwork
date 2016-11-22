@@ -10,10 +10,11 @@
 			$where = func_get_arg($i);
 			$query = "$query ".$where;
 		}
+		echo func_get_args();
 		return mysqli_query($link ,$query);
-		echo $query;
+		
 	}
 
-	select($link,"TESTE ", "1","OR","4");
+	select($link,"active", "1","OR","4");
 
  ?>
