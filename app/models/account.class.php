@@ -107,11 +107,8 @@ class Account extends ActiveRecord
 
 }
 
-
 	$conta = new Account(NULL, "Lucas","Simao", "lucas64","18/03","18/03",10,"2351451521","Macho","preto");
 	// $conta->saveClass();
 	$conta->saveClass($link);
-
-
 
 ?>

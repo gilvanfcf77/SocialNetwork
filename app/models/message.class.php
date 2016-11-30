@@ -1,20 +1,50 @@
 <?php
-/**
-* 
-*/
-class Message extends AnotherClass
+class Message
 {
-
 	private $text;
 	private $image;
 	private $dateTime;
-	protected $view = false;
+	private $view;
 
-	function __construct(argument)
+	public function __constructor($text,$image,$dateTime,$view)
 	{
-		# code...
+	 	$this->text = $text;
+		$this->image = $image;
+		$this->dateTime = $dateTime;
+		$this->view = $view;
+	}
+
+	public function getText()
+	{
+	 	return $this->text;
+	}
+	public function setText($text)
+	{
+	 	$this->text = $text;
+	}
+	public function getImage()
+	{
+	 	return $this->image;
+	}
+	public function setImage($image)
+	{
+	 	$this->image = $image;
+	}
+	public function getDateTime()
+	{
+	 	return $this->dateTime;
+	}
+	public function setDateTime($dateTime)
+	{
+	 	$this->dateTime = $dateTime;
+	}
+	public function getView()
+	{
+	 	return $this->view;
+	}
+	public function setView($view)
+	{
+	 	$this->view = $view;
 	}
 }
-
-
 ?>
