@@ -6,15 +6,18 @@
 class Notification extends AnotherClass
 {
 	
-	protected $subject;
-	protected $action;
-	protected $publication;
-	protected $place;
+	private $subject;
+	private $action;
+	private $publication;
+	private $place;
 
 	function __construct(argument)
 	{
-		# code...
+		
 	}
+
+
+
 }
 
 

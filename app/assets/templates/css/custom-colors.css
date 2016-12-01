@@ -1,0 +1,77 @@
+/*CSS criado para auxiliar na customização do site*/
+html, body {
+	width: 100%;
+	height: 100%;
+	/*background: white;*/
+	margin:0;
+	padding:0;
+}
+.textcolor{
+	color: white;
+}
+.parallax_1{
+	top: 30em;
+}
+
+.capa
+{
+	min-height: 100%;
+}
+
+.section-no-pad-bot-parallax-container{
+	overflow: hidden; /* para que não tenha rolagem se a imagem de fundo for maior que a tela */
+	width: 100%;/*Para ocupar toda a tela*/
+	height: 100%;
+	position: relative;
+	min-height: 100% !important;
+	max-height: 100%;
+	display: block !important;
+}
+
+.fullscreen
+{
+	min-height: 100%;
+	min-width: 100%;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+#home {
+	width: 100%;
+	display: block !important;
+}
+
+.imgicon
+{
+	height: 60px;
+	width: 60px;
+}
+
+.background
+{
+	background-image: url("../img/capa-main.png");
+	background-position-x: 50%;
+	background-position-y: 0px;
+	background-size: 100% 100%;
+	background-repeat-x: no-repeat;
+	background-repeat-y: no-repeat;
+	background-attachment: fixed;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: initial;
+	max-height: 100%;
+	max-width: 100%;
+	height: 100%;
+	width: 100%;
+}
+
+/* Links: 
+	https://www.useverso.com/camiseta/100/camiseta-pikachu-amarela
+	https://www.useverso.com/camiseta/134/camiseta-subzero-azul
+	https://www.useverso.com/camiseta/158/camiseta-abbey-horror
+	https://www.useverso.com/poster/120/combo-camiseta-poster-evolucao-saiyajin
+	https://www.useverso.com/poster/116/poster-evolucao-saiyajin
+	https://www.useverso.com/camiseta/91/camiseta-nostalgia-azul# 
+	https://www.useverso.com/camiseta/98/camiseta-don-ramon
+	https://www.useverso.com/camiseta/131/camiseta-get-over-here
+	https://www.useverso.com/camiseta/130/camiseta-get-over-here

@@ -4,14 +4,14 @@ class Message
 	private $text;
 	private $image;
 	private $dateTime;
-	private $view;
+	private $is_visualized;
 
-	public function __constructor($text,$image,$dateTime,$view)
+	public function __constructor($text,$image,$dateTime,$is_visualized)
 	{
 	 	$this->text = $text;
 		$this->image = $image;
 		$this->dateTime = $dateTime;
-		$this->view = $view;
+		$this->is_visualized = $is_visualized;
 	}
 
 	public function getText()
@@ -38,13 +38,13 @@ class Message
 	{
 	 	$this->dateTime = $dateTime;
 	}
-	public function getView()
+	public function getIsVisualized()
 	{
-	 	return $this->view;
+	 	return $this->$s_visualized;
 	}
-	public function setView($view)
+	public function setIsVisualized($$is_visualized)
 	{
-	 	$this->view = $view;
+	 	$this->is_visualized = $is_visualized;
 	}
 }
 ?>
