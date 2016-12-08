@@ -86,7 +86,7 @@
       </div><!-- tab-content -->
       
 </div> <!-- /form -->
-
+<script src="js/application.js"></script>
 </body>
 </html>
 

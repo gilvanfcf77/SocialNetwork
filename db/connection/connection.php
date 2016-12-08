@@ -15,8 +15,7 @@
 	// // mysqli_close($link);
 
 
-
-		$link = new mysqli(	$server_host,$user_name,	$password,	$database);
+	$link = new mysqli(	$server_host,$user_name,	$password,	$database);
 		if ($link->connect_errno)
 			die("Falha na conexão:(".$conexao->connect_errno.") ".$conexao->connect_error);
 		else

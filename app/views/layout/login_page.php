@@ -1,13 +1,4 @@
-<html>
-<head>
-	<title></title>
-
-
-	<link href="css/style.css" rel="stylesheet">
-</head>
-<body>
-
-	<div class="form">
+<div class="form">
       
       <ul class="tab-group">
         <li class="tab active"><a href="#signup">Sign Up</a></li>
@@ -86,7 +77,3 @@
       </div><!-- tab-content -->
       
 </div> <!-- /form -->
-
-</body>
-</html>
-
