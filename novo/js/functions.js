@@ -19,40 +19,6 @@ $(function(){
 		});
 	}
 	limitaCaracteres('msg', 'counter', 140);
-
-	$('.send_message').on('click', function(e){
-		e.preventDefault();
-		var texto_digitado = $('.msg').val();
-
-		$.ajax({
-			method: 'POST',
-			url: 'sys/tweetar.php',
-			data: {tweet: texto_digitado},
-			dataType: 'json',
-			success: function(retorno){
-				 /*
-					retorno.nome
-					retorno.tweet
-					retorno.date
-					retorno.status
-				 */
-
-				 if(retorno.status == 'ok'){
-				 	var tweet = '<article class="tweet hidden">';
-				 		tweet += '<span class="nome"><a href="#">'+retorno.nome+'</a> disse:</span>';
-						tweet += '<p>'+retorno.tweet+'</p>';
-						tweet += '<span class="date">'+retorno.date+'</span></article>';
-
-					$('#content').prepend(tweet);
-					$('#content .tweet.hidden').slideDown().promise().done(function(){
-						$(this).removeClass('hidden');
-					});
-				 }else{
-				 	alert('ocorreu um erro ao enviar seu tweet');
-				 }
-			}
-		});
-
-		return false;
-	});
+	return false;
+	
 });

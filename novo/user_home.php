@@ -1,10 +1,10 @@
 <section id="envio_mensagem">
-	<form action="create_post.php" method="post" enctype="multipart/form-data">
+	<form action="create_post.php" method="post">
 		<label>
 			<span class="title">Digite uma mensagem</span>
 			<textarea name="mensagem" class="msg"></textarea>
 			<span class="counter"></span>
-			<button class="send_message">Enviar</button>
+			<input type="submit" class="send_message"></input>
 		</label>
 	</form>
 </section>
@@ -24,6 +24,7 @@ if ($result->num_rows > 0) {
 		<p><?php echo $row["text"];?></p>
 		<span class="date"><?php echo date('d/m/Y H:i:s', strtotime($row["date"]));?></span>
 		</article>
+
 <?php
 	}
 } else {
