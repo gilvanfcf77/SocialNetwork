@@ -8,9 +8,7 @@
 
     $sql = "INSERT INTO posts (name, text, date) VALUES ('$name', '$text', '$date')";
 
-    $result = mysqli_query($sql);
-
-    if($result){
+    if($link->query($sql)){
 	     echo "OK";
 		}else
     {
