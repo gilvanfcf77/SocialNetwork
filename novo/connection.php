@@ -3,7 +3,7 @@
 	$server_host = "localhost";
 	$database = "socialnetwork";
 	$user_name = "root";
-	$password = "";
+	$password = "85460045se";
 
 	// $link = mysqli_connect($server_host,$user_name,$password,$database) or print (mysql_error());
 	// if(!$link)
