@@ -1,41 +1,28 @@
 <?php 
-  session_start(); 
-  $username = $_POST["username"];
-  // md5 - evitar que a senha do usuario seja armazenada limpa no banco .
-  $senha = md5($_POST["password"]);
-  // echo "Seu nome de usuario é: $username e sua senha é $senha";
-  // acesso ao banco de dados
-  include "queries\connection.sql";
-?>
-
-<?php 
-
-  include "conecta_mysql.sql";
-
+  include "queries/connection.php";
   session_start();
-
-  if (isset($_SESSION["nome_usuario"])) 
+  if (isset($_SESSION["username"])) 
   {
-    $username = $_SESSION["nome_usuario"];
+    $username = $_SESSION["username"];
   }
-  if (isset($_SESSION["senha_usuario"]))
+echo $_SESSION["username"];
+  if (isset($_SESSION["password"]))
   {
-    $password = $_SESSION["senha_usuario"];
+    $password = $_SESSION["password"];
   }
-  if (!(empty($nome_usuario) OR empty($senha_usuario)))
+  if (!(empty($username) OR empty($password)))
   {
-
-    $query = "SELECT * FROM usuarios WHERE login = '$nome_usuario'";
+    $query = "SELECT * FROM users WHERE login = '$username'";
     $resultado = mysqli_query($con,$query);
     $row = mysqli_fetch_assoc($resultado);
 
     if(mysqli_num_rows($resultado)==1)
     {
-      if ($senha_usuario != md5($row["senha"])) // confere senha
+      if ($password != md5($row["password"])) // confere senha
       {
-        unset($_SESSION["nome_usuario"]);
-        unset($_SESSION["senha_usuario"]);
-        unset($_SESSION["perfil_usuario"]);
+        unset($_SESSION["username"]);
+        unset($_SESSION["password"]);
+        // unset($_SESSION["perfil_usuario"]);
         echo "Você não Efetuou o Login <br/>";
         echo "<p align =\" center \"><a href =\" index . html \"> Voltar </a ></p>";
         exit ;
@@ -43,5 +30,11 @@
       // else
       //  echo "VocÊ efetuou o login";
     }
+
+  }
+  else
+  {
+      echo "Você não Efetuou o Login <br/>";
+      echo "<p align =\" center \"><a href =\" login.php \"> Voltar </a ></p>";
   }
  ?>
