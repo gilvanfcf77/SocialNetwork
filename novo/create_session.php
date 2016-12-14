@@ -23,25 +23,25 @@
   include "queries/connection.php";
 
   $query = "SELECT * FROM users where login = '$username'";
-  // echo $query;
-  $resultado = mysqli_query($con, $query);
+  echo $query;
+  $resultado = mysqli_query($link, $query);
   $linhas = mysqli_num_rows($resultado);
 
   if( $linhas == 0) // testa se a consulta retornou algum registro
   {
     echo "<html ><body >";
     echo "<p align =\" center \">Desculpe, não escontramos seu nome de Usuário!</p>";
-    echo "<p align =\" center \"><a href =\" index.php \"> Voltar </a ></p>";
+    echo "<p align =\" center \"><a href =\" login.php \"> Voltar </a ></p>";
     echo " </body ></ html >";
   }
   else
   {
     $row = mysqli_fetch_assoc($resultado);
-    if ( $senha != md5($row["senha"])) // confere senha
+    if ( $senha != md5($row["password"])) // confere senha
     {
       echo "<html ><body >";
       echo "<p align =\" center \">Desculpe, sua senha está incorreta!</p>";
-      echo "<p align =\" center \"><a href =\" index.php \"> Voltar </a ></p>";
+      echo "<p align =\" center \"><a href =\" login.php \"> Voltar </a ></p>";
       echo " </body ></ html >";
     }
     else
@@ -49,7 +49,7 @@
         {
           echo "<html ><body >";
           echo "<p align =\" center \">Desculpe, digite corretamente o captcha!</p>";
-          echo "<p align =\" center \"><a href =\" index.php \"> Voltar </a ></p>";
+          echo "<p align =\" center \"><a href =\" login.php \"> Voltar </a ></p>";
           echo " </body ></ html >";
           session_destroy();
         }
@@ -65,9 +65,9 @@
       $_SESSION ["perfil_usuario"] = $perfil ;
       $_SESSION ["id_usuario"] = $id;
       // direciona para a ´apgina inicial do sistema .
-      header ("Location:principal.php");
+      header ("Location:login.php");
     }
   }
   // Encerrar ~aconexo com o banco de dados .
-  mysqli_close ($con);
+  mysqli_close ($link);
  ?> 
