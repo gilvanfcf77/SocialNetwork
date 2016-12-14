@@ -11,14 +11,26 @@
 
 <section id="content">
 <?php
-	$tweets = $pdo->prepare("SELECT * FROM `posts` ORDER BY `id` DESC");
-	$tweets->execute();
-	while($tweet = $tweets->fetchObject()){
+
+$sql = "SELECT * FROM posts ORDER BY `id` DESC";
+$result = $link->query($sql);
+
+if ($result->num_rows > 0) {
+	// output data of each row
+	while($row = $result->fetch_assoc()) {
 ?>
-	<article class="tweet">
-		<span class="nome"><a href="#"><?php echo $tweet->nome;?></a> disse:</span>
-		<p><?php echo $tweet->tweet;?></p>
-		<span class="date"><?php echo date('d/m/Y H:i:s', strtotime($tweet->data));?></span>
-	</article>
-<?php }?>
+		<article class="tweet">
+		<span class="nome"><a href="#"><?php echo $row["name"];?></a> disse:</span>
+		<p><?php echo $row["text"];?></p>
+		<span class="date"><?php echo date('d/m/Y H:i:s', strtotime($row["date"]));?></span>
+		</article>
+<?php
+	}
+} else {
+	echo "Nenhum post encontrado!";
+}
+$link->close();
+
+?>
+
 </section>
