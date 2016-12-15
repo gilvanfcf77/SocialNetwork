@@ -44,7 +44,7 @@
  	</head>
  	<body >
  		<form method ="POST" action ="login.php">
-	 		<center >
+	 		<center>
 		 		<img src="images/ouro.jpg" id="principalId" width ="15%"/>
 		 		<h1> 
 		 			Sistema de Controle de Finanças Empresariais 
@@ -65,8 +65,8 @@
 		 					<?php
 				 				if ($perfil_usuario ==2){ 
 							?>
-							<td><a href ="addUsuarios.php"><img src="images/adicionarUsuarios.jpg"></a></td>
-				 			<td><a href =" delUsuarios.php"><img src="images/excluirUsuarios.jpg"></a></td>
+							<!-- <td><a href ="addUsuarios.php"><img src="images/adicionarUsuarios.jpg"></a></td>
+				 			<td><a href =" delUsuarios.php"><img src="images/excluirUsuarios.jpg"></a></td> -->
 				 			<?php } ?>
 		 				</tr>
 				    </table>

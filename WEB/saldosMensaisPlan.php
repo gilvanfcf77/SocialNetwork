@@ -88,6 +88,7 @@
 								 echo "<td align ='center' width ='33%'>".$linha ["datahora"]." </td >";
 								 echo "<td align ='center' width ='33%'>".$linha ["valor"]." </td >";
 								 echo " </tr >";
+								 echo "<a href='deletar_despesa.php?id=$linha[id]'>deletar</a>";
 								 // Incrementar o valor total
 								 $recFixTotal = $recFixTotal + $linha["valor"];
 						 	}?>
@@ -109,6 +110,7 @@
 						 	echo " </tr >";
 						 	// Incrementar o valor total
 						 	$recVarTotal = $recVarTotal + $linha ["valor"];
+						 	 echo "<a href='deletar_despesa.php?id=$linha[id]'>deletar</a>";
 						} ?>
 					 	<tr>
 					 		<td width ="33%"></td ><td align ='right' width ="33%"><br><br><b class="total"> Total: <?php echo $recVarTotal ?></b></td> <td></td>
@@ -129,6 +131,7 @@
 								echo "<td align ='center' width ='33%'>".$linha ["datahora"]." </td >";
 								echo "<td align ='center' width ='33%'>".$linha ["valor"]." </td >";
 								echo " </tr >";
+								echo "<a href='deletar_despesa.php?id=$linha[id]'>deletar</a>";
 								// Incrementar o valor total
 								$desFixTotal = $desFixTotal + $linha ["valor"];
 							} ?>
@@ -148,6 +151,7 @@
 								echo "<td align ='center' width ='33%'>".$linha ["datahora"]." </td >";
 								echo "<td align ='center' width ='33%'>".$linha ["valor"]." </td >";
 								echo " </tr >";
+								echo "<a href='deletar_despesa.php?id=$linha[id]'>deletar</a>";
 								// Incrementar o valor total
 								$desVarTotal = $desVarTotal + $linha["valor"];
 					 		} ?>
