@@ -45,7 +45,7 @@
  	<body >
  		<form method ="POST" action ="login.php">
 	 		<center>
-		 		<img src="images/ouro.jpg" id="principalId" width ="15%"/>
+		 		<!-- <img src="images/ouro.jpg" id="principalId" width ="15%"/> -->
 		 		<h1> 
 		 			Sistema de Controle de Finanças Empresariais 
 		 		</h1 >
@@ -61,7 +61,7 @@
 		 					<td><a href ="saldosMensaisPlan.php" ><img src="images/planilha.jpg"></a></td>
 		 				</tr>
 		 				<tr>
-		 					<td><a href ="excluirReceitasDespesas.php"><img src="images/excluirReceitasDespesas.jpg"></a></td>
+		 					<!-- <td><a href ="excluirReceitasDespesas.php"><img src="images/excluirReceitasDespesas.jpg"></a></td> -->
 		 					<?php
 				 				if ($perfil_usuario ==2){ 
 							?>
