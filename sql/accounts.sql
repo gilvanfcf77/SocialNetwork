@@ -26,6 +26,11 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `accounts`
 --
 
+-- O campo `gender` aceita apenas os valores definidos abaixo.
+-- Para voltar a funcionar em um banco criado com a versão anterior deste arquivo:
+-- 1. Revise as linhas existentes, pois valores antigos deixam de ser válidos, e rode:
+--    ALTER TABLE `accounts` MODIFY `gender` enum('Masculino','Feminino','Outro','') NOT NULL;
+-- 2. Os formulários usam texto livre nesse campo, então precisam enviar um desses valores.
 CREATE TABLE `accounts` (
   `name` varchar(50) NOT NULL,
   `lastName` varchar(50) NOT NULL,
@@ -34,7 +39,7 @@ CREATE TABLE `accounts` (
   `joinDate` datetime NOT NULL,
   `friendship_id` int(11) NOT NULL,
   `phonenumber` varchar(15) DEFAULT NULL,
-  `gender` enum('"MACHO"','"MUIÉ"','"TRAVECO"','') NOT NULL,
+  `gender` enum('Masculino','Feminino','Outro','') NOT NULL,
   `color` int(11) NOT NULL,
   `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

@@ -72,6 +72,6 @@
 
 	}
 
-	// insert($link,"accounts",'NULL' ,"'Lucas'" ,"'Simao'" ,"'lucas64'" ,"'18/03'" ,"'18/03'" ,45,2351451521 ,"'MACHO'" ,"'preto'");
+	// insert($link,"accounts",'NULL' ,"'Lucas'" ,"'Simao'" ,"'lucas64'" ,"'18/03'" ,"'18/03'" ,45,2351451521 ,"'Masculino'" ,"'preto'");
 
  ?>
